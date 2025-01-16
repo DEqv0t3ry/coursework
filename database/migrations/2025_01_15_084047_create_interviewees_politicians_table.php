@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('interviewee_id')->constrained()->onDelete('cascade');
             $table->foreignId('politician_id')->constrained()->onDelete('cascade');
+            $table->integer('priority');
+            $table->date('date');
         });
     }
 
